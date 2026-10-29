@@ -1,0 +1,21 @@
+[project]
+name = "quantum-agentic-cli"
+version = "0.1.0"
+description = "Local-first, modular quantum-agentic command-line application"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+quantum-agent = "quantum_agentic_cli.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
